@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, serif;
+}
+/*id la menu, ul,li cua id menu*/
+#menu, #menu ul, #menu li {
+    padding: 0;
+    margin: 0;
+}
+#menu li{
+    list-style: none;
+    /*bỏ kí hiệu dánh dấu của danh sách */
+    position: relative;
+    width: 100px;
+    height: 30px;
+    padding: 0 20px;
+/*    cố định lề trái phải*/
+    background-color: black;
+    line-height: 30px;
+/*    chều cao mỗi dòng văn bản*/
+    cursor: pointer;
+/*    chuyển biểu tượng con trỏ màn hình sang hình bàn tay*/
+}
+#menu li a{
+    text-decoration: none; /*loại bỏ gạch chân mặc định*/
+    color: white;
+}
+#menu li:hover{
+    background-color: red;
+}
+#menu ul ul{
+    position: absolute; /*đặt vị trí của menu con tuyệt đối so với menu cha*/
+    top: 0;
+    left: 140px; /*đặt menu con cách menu cha 140px về bên trái*/
+    visibility: hidden; /*ẩn menu con ban đầu (khi chưa hover)*/
+}
+#menu ul li:hover ul{
+    visibility: visible; /*khi hover vào 1 mục li của menu cha thì hiển thị menu con*/
+}
